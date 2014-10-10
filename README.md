@@ -1,7 +1,7 @@
 Bunny-Defender
 ==============
 
-'Bunny Defender' was written with Coffee Script + Phaser framework(phaser.io)
+'Bunny Defender' game written with Coffee Script + Phaser framework(phaser.io)
 
 This game was based on Lynda.com's tutorial (http://www.lynda.com/Phaser-tutorials/HTML5-Game-Development-Phaser/163641-2.html), but it was rewritten with coffee script and add Cakefile with minification build process for mobile app.
 
