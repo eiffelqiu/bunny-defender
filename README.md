@@ -7,6 +7,10 @@ This game was based on Lynda.com's tutorial (http://www.lynda.com/Phaser-tutoria
 
 ![Screen Shot](screenshot.png "Screen Shot")
 
+## Demo Site:  
+
+[Bunny Defender](http://bunny-defender.herokuapp.com/ "Bunny Defender") 
+
 ## Prerequisite
 
     install nodejs/npm from http://www.nodejs.org/
