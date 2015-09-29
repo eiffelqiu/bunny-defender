@@ -1,8 +1,3 @@
-# Cakefile to document, compile, join and minify CoffeeScript files for
-# client side apps. Just edit the config object literal.
-#
-# -jrmoran
- 
 fs            = require 'fs'
 {exec, spawn} = require 'child_process'
  
@@ -34,16 +29,12 @@ task 'watch', 'watch and compile changes in source dir', ->
   watch.stdout.on 'data', (data)-> process.stdout.write data
  
 task 'build', 'join and compile *.coffee files', ->
-   exec "coffee -c src/", exerr 
-   exec "cat #{jsFiles} > #{outJS}.js", exerr
+   exec "coffee -b -o js/ -c src/", exerr
  
 task 'min', 'minify compiled *.js file', ->
+  exec "cat #{jsFiles} > #{outJS}.js", exerr
   exec "uglifyjs #{outJS}.js -m -c -o #{outJS}.min.js", exerr
   #exec "java -jar #{config.yuic} #{outJS}.js -o #{outJS}.min.js", exerr
- 
-task 'bam', 'build and minify', ->
-  invoke 'build'
-  invoke 'min'
  
 task 'test', 'runs jasmine tests', ->
   exec 'jasmine-node --coffee --verbose spec', exerr
