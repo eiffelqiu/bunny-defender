@@ -24,7 +24,8 @@ This game was based on Lynda.com's tutorial (http://www.lynda.com/Phaser-tutoria
 ## Deployment
 
     $ cake                      # list task
-    $ cake bam                  # build and minify
+    $ cake build                # build
+    $ cake min                  # minify
 
 ## Run
 
