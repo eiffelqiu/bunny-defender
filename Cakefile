@@ -33,7 +33,8 @@ task 'watch', 'watch and compile changes in source dir', ->
   watch.stdout.on 'data', (data)-> process.stdout.write data
  
 task 'build', 'join and compile *.coffee files', ->
-  exec "coffee -b -c -j #{outJS}.js -- #{strFiles}", exerr
+   exec "coffee -c src/", exerr 
+   exec "cat #{jsFiles} > #{outJS}.js", exerr
  
 task 'min', 'minify compiled *.js file', ->
   exec "uglifyjs #{outJS}.js -m -c -o #{outJS}.min.js", exerr
