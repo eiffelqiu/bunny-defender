@@ -16,6 +16,7 @@ This game was based on Lynda.com's tutorial (http://www.lynda.com/Phaser-tutoria
     install nodejs/npm from http://www.nodejs.org/
 
     $ npm install -g coffee-script  # install coffee-script
+    $ npm install -g uglifyjs       # install minify tool
 
 ## Development
 
