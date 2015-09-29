@@ -16,6 +16,7 @@ config =
  
 outJS    = "#{config.outDir}/#{config.outFile}"
 strFiles = ("#{config.srcDir}/#{file}.coffee" for file in config.inFiles).join ' '
+jsFiles = ("#{config.outDir}/#{file}.js" for file in config.inFiles).join ' '
 
 # deal with errors from child processes
 exerr  = (err, sout,  serr)->
